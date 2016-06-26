@@ -1,0 +1,8 @@
+# pbs create_project
+
+pbs add_tasks --tasks-file /Users/aimeebarciauskas/IdeaProjects/gaceta/python_scripts/gaceta_tasks.json
+
+pbs update_project
+
+pbs delete_tasks
+

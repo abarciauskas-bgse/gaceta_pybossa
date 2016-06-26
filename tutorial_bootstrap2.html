@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="span12">
+        <div id="modal" class="modal hide fade">
+            <div class="modal-header">
+                <h3>Redundancy in Gaceta Municipal</h3>
+            </div>
+            <div id="0" class="modal-body" style="display:none">
+              <p>
+                  Two statements are redundant when the second conveys the same message as the first, irrespective of persons or places. <strong>In this evaluation, ignore dissimilar people and places</strong>. 
+              </p> 
+            </div>
+            <div id="1" class="modal-body" style="display:none">
+                <p>The application is really simple. It displays two statements extracted from the Gaceta Municipal de Barcelona and asks: <strong>Are these 2 statements redundant?</strong></p>
+                <img src="http://farm7.staticflickr.com/6109/6286728068_2f3c6912b8_q.jpg" class="img-thumbnail"/>
+                <p>You will have 3 possible answers:
+                <ul>
+                    <li>Yes,</li>
+                    <li>No, and</li>
+                    <li>I don't know</li>
+                </ul>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a id="prevBtn" href="#" onclick="showStep('prev')" class="btn">Previous</a>
+                <a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
+                <a id="startContrib" href="../flickrperson/newtask" class="btn btn-primary" style="display:none"><i class="icon-thumbs-up"></i> Get started!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var step = -1;
+    function showStep(action) {
+        $("#" + step).hide();
+        if (action == 'next') {
+            step = step + 1;
+        }
+        if (action == 'prev') {
+            step = step - 1;
+        }
+        if (step == 0) {
+            $("#prevBtn").hide();
+        }
+        else {
+            $("#prevBtn").show();
+        }
+
+        if (step == 1 ) {
+            $("#nextBtn").hide();
+            $("#startContrib").show();
+        }
+        $("#" + step).show();
+    }
+
+    showStep('next');
+    $("#modal").modal('show');
+</script>

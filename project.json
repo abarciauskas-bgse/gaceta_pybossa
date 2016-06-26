@@ -1,0 +1,6 @@
+{
+    "name": "Gaceta Redundancy Evaluation",
+    "short_name": "gaceta",
+    "description": "Evaluate redundancy in Barcelona's municipal gazette",
+    "question": "Are these sentences redundant?"
+}
